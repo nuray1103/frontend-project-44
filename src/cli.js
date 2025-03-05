@@ -11,6 +11,7 @@ const game_map = {
     calc: brain_calc,
     gcd: brain_gcd,
     progression: brain_progression,
+    prime: brain_prime,
 };
 
 const desc_map = {
@@ -22,14 +23,12 @@ const desc_map = {
 };
 
 export default (game) => {
-    brain_games();
+    const name = brain_games();
 
     if (game === 'games') {
         return;
     }
 
-    const name = readlineSync.question('May I have your name? ');
-    console.log(`Hello, ${name}!`);
     console.log(desc_map[game]);
     const game_func = game_map[game];
 
