@@ -3,21 +3,11 @@ import logicGame from '../../src/index.js';
 
 const rules = 'Answer "yes" if the number is even, otherwise answer "no".';
 
-const expressionFunction = () => {
-  const randomNum = Math.floor(Math.random() * 50);
-  return randomNum;
-};
+const generateNumber = () => Math.floor(Math.random() * 50);
 
-const correctAnswerFunction = (randomNum) => {
-  let correctAnswer = '';
-  if (randomNum % 2 === 0) {
-    correctAnswer = 'yes';
-  }
+const isEven = (number) => number % 2 === 0;
 
-  if (randomNum % 2 !== 0) {
-    correctAnswer = 'no';
-  }
-  return correctAnswer;
-};
+const getCorrectAnswer = (number) => (isEven(number) ? 'yes' : 'no');
 
-console.log(logicGame(rules, expressionFunction, correctAnswerFunction));
+
+console.log(logicGame(rules, generateNumber, getCorrectAnswer));
