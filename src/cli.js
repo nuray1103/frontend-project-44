@@ -4,6 +4,7 @@ import brain_calc from './brain-calc.js';
 import brain_gcd from './brain-gcd.js';
 import brain_games from './brain-games.js';
 import brain_progression from './brain-progression.js';
+import brain_prime from './brain-prime.js';
 
 const game_map = {
     even: brain_even,
@@ -17,6 +18,7 @@ const desc_map = {
     calc: 'What is the result of the expression?',
     gcd: 'Find the greatest common divisor of given numbers.',
     progression: 'What number is missing in the progression?',
+    prime: 'Answer "yes" if given number is prime. Otherwise answer "no".',
 };
 
 export default (game) => {
